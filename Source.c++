@@ -1,8 +1,6 @@
 #include <iostream>
-#include </home/janeyyl/Desktop/C++/Power.cpp>
 
 double calculateAndPrint(double , double , double , char);
-double power(double , int);
 char clear(char);
 
 int main() {
@@ -16,10 +14,10 @@ int main() {
     do {
         std::cout << "\nWhat function would you like to preform: \n"
               << "[0] Exit" << std::endl
-              << "[1] Basic math " << std::endl
-              << "[2] Calculate to the power of " "" << std::endl;
+              << "[1] Basic math " << std::endl;
         std::cin >> select;
 
+        //originally i had this set to if and elif statements but i was told switch case is a good way to initalize a menu screen
         switch (select){
             case 1 :
                 std::cout << "enter the first number: ";
@@ -48,6 +46,7 @@ int main() {
 
 double calculateAndPrint(double x , double y , double ans , char operand) {
 
+    //i copied this switch case from the very sad calculator i built using Java
     switch (operand) {
         case '+' : ans = x + y;
             break;
@@ -73,11 +72,11 @@ char clear(char ce) {
     std::cin >> ce;
 
     switch (ce) {
-        case 'Y' : return 0;
+        case 'Y' : return 0; //these do nothing yet, i want to make it loop back to case 1 from the main()
             break;
         case 'y' : return 0;
             break;
-        case 'N' : main();
+        case 'N' : main(); //i wanted "no" to take you back to the main app menu rather than close the app completely
             break;
         case 'n' : main();
     }
@@ -85,11 +84,13 @@ char clear(char ce) {
     return EXIT_SUCCESS;
 }
 
-/*
+/* My notes :L
+
     cout = Console Output
     std = STANDARD
     return type 0, states everything ran smooth and had no issues
     iostream defines in/out stream 
     return 0 or EXIT_SUCCESS or no line at all
     return type is declaired in the main with "int" return type for this is EXIT_SUCCESS or 0 which is an int
+    
 */
