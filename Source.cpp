@@ -1,3 +1,5 @@
+//https://github.com/JaneyyL
+
 #include <iostream>
 
 double calculateAndPrint(double , double , double , char);
